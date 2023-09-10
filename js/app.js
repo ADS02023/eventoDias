@@ -41,7 +41,6 @@ buttonAdd.addEventListener("click", (e) => {
   addEvent();
 });
 
-
 // Esta función se llama cuando se quiere agregar un nuevo evento.
 function addEvent() {
   // Verifica si los campos de nombre de evento o fecha de evento están vacíos.
@@ -72,7 +71,7 @@ function addEvent() {
 
   // Llama a la función "renderEvents()" para actualizar la visualización de eventos en la página.
   renderEvents();
-}
+}//fin de la funcion addevent()
 
 // Esta función se llama para renderizar y mostrar la lista de eventos en la página.
 function renderEvents() {
@@ -98,8 +97,7 @@ function renderEvents() {
                 <button data-id="${event.id}" class="bDelete">Eliminar</button>
             </div>
         </div>`;
-
-  });
+  });// fin de la funcion flecha
 
   // Actualiza el contenido del elemento con el ID "tasksContainer" con las representaciones HTML de los eventos.
   document.querySelector("#tasksContainer").innerHTML = eventsHTML.join("");
@@ -115,9 +113,9 @@ function renderEvents() {
       save();
       // Vuelve a llamar a la función "renderEvents()" para actualizar la visualización.
       renderEvents();
-    });
-  });
-}
+    });//fin del listener
+  });//fin del forEach
+}//fin de la funcion renderEvents
 
 
 // Calcula la diferencia en días entre una fecha dada y la fecha actual.
